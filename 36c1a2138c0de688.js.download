@@ -1,0 +1,121 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a7cf0f3f-74b9-8cfb-1592-969dba0a7c73")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,480809,e=>{"use strict";function t(e){return`/refer/${e}`}e.s(["REFERRAL_CREDIT_AMOUNT_USD",0,10,"getReferralPath",()=>t])},98346,e=>{"use strict";var t=e.i(276385),r=e.i(116235);function a(e){return(0,t.jsx)(r.default,{...e,children:(0,t.jsx)("path",{fillRule:"evenodd",d:"M2.25 6A3.75 3.75 0 0 1 6 2.25h10.5A3.75 3.75 0 0 1 20.25 6v3a.75.75 0 0 1-1.5 0V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25h10.5A2.25 2.25 0 0 0 18.75 18v-1.979a.75.75 0 0 1 1.5 0V18a3.75 3.75 0 0 1-3.75 3.75H6A3.75 3.75 0 0 1 2.25 18V6Zm12.124 1.677a.75.75 0 0 1 0 1.06L11.41 11.7h9.59a.75.75 0 0 1 0 1.5h-9.59l2.963 2.962a.75.75 0 1 1-1.061 1.06L9.07 12.98a.75.75 0 0 1 0-1.06l4.243-4.243a.75.75 0 0 1 1.06 0Z",clipRule:"evenodd"})})}e.s(["default",()=>a])},924035,(e,t,r)=>{t.exports=e.r(785274)},497247,(e,t,r)=>{"use strict";Object.defineProperty(r,"__esModule",{value:!0}),Object.defineProperty(r,"LoadableContext",{enumerable:!0,get:function(){return a}});let a=e.r(2879)._(e.r(389959)).default.createContext(null)},783292,(e,t,r)=>{"use strict";Object.defineProperty(r,"__esModule",{value:!0}),Object.defineProperty(r,"default",{enumerable:!0,get:function(){return m}});let a=e.r(2879)._(e.r(389959)),i=e.r(497247),o=[],l=[],n=!1;function s(e){let t=e(),r={loading:!0,loaded:null,error:null};return r.promise=t.then(e=>(r.loading=!1,r.loaded=e,e)).catch(e=>{throw r.loading=!1,r.error=e,e}),r}class f{constructor(e,t){this._loadFn=e,this._opts=t,this._callbacks=new Set,this._delay=null,this._timeout=null,this.retry()}promise(){return this._res.promise}retry(){this._clearTimeouts(),this._res=this._loadFn(this._opts.loader),this._state={pastDelay:!1,timedOut:!1};let{_res:e,_opts:t}=this;e.loading&&("number"==typeof t.delay&&(0===t.delay?this._state.pastDelay=!0:this._delay=setTimeout(()=>{this._update({pastDelay:!0})},t.delay)),"number"==typeof t.timeout&&(this._timeout=setTimeout(()=>{this._update({timedOut:!0})},t.timeout))),this._res.promise.then(()=>{this._update({}),this._clearTimeouts()}).catch(e=>{this._update({}),this._clearTimeouts()}),this._update({})}_update(e){this._state={...this._state,error:this._res.error,loaded:this._res.loaded,loading:this._res.loading,...e},this._callbacks.forEach(e=>e())}_clearTimeouts(){clearTimeout(this._delay),clearTimeout(this._timeout)}getCurrentValue(){return this._state}subscribe(e){return this._callbacks.add(e),()=>{this._callbacks.delete(e)}}}function c(t){return function(t,r){let s=Object.assign({loader:null,loading:null,delay:200,timeout:null,webpack:null,modules:null},r),c=null;function u(){if(!c){let e=new f(t,s);c={getCurrentValue:e.getCurrentValue.bind(e),subscribe:e.subscribe.bind(e),retry:e.retry.bind(e),promise:e.promise.bind(e)}}return c.promise()}if("u"<typeof window&&o.push(u),!n&&"u">typeof window){let t=s.webpack&&"function"==typeof e.t.resolveWeak?s.webpack():s.modules;t&&l.push(e=>{for(let r of t)if(e.includes(r))return u()})}function m(e,t){let r;u(),(r=a.default.useContext(i.LoadableContext))&&Array.isArray(s.modules)&&s.modules.forEach(e=>{r(e)});let o=a.default.useSyncExternalStore(c.subscribe,c.getCurrentValue,c.getCurrentValue);return a.default.useImperativeHandle(t,()=>({retry:c.retry}),[]),a.default.useMemo(()=>{var t;return o.loading||o.error?a.default.createElement(s.loading,{isLoading:o.loading,pastDelay:o.pastDelay,timedOut:o.timedOut,error:o.error,retry:c.retry}):o.loaded?a.default.createElement((t=o.loaded)&&t.default?t.default:t,e):null},[e,o])}return m.preload=()=>u(),m.displayName="LoadableComponent",a.default.forwardRef(m)}(s,t)}function u(e,t){let r=[];for(;e.length;){let a=e.pop();r.push(a(t))}return Promise.all(r).then(()=>{if(e.length)return u(e,t)})}c.preloadAll=()=>new Promise((e,t)=>{u(o).then(e,t)}),c.preloadReady=(e=[])=>new Promise(t=>{let r=()=>(n=!0,t());u(l,e).then(r,r)}),"u">typeof window&&(window.__NEXT_PRELOADREADY=c.preloadReady);let m=c},935360,(e,t,r)=>{"use strict";Object.defineProperty(r,"__esModule",{value:!0});var a={default:function(){return u},noSSR:function(){return c}};for(var i in a)Object.defineProperty(r,i,{enumerable:!0,get:a[i]});let o=e.r(2879),l=e.r(478902);e.r(389959);let n=o._(e.r(783292)),s="u"<typeof window;function f(e){return{default:e?.default||e}}function c(e,t){if(delete t.webpack,delete t.modules,!s)return e(t);let r=t.loading;return()=>(0,l.jsx)(r,{error:null,isLoading:!0,pastDelay:!1,timedOut:!1})}function u(e,t){let r=n.default,a={loading:({error:e,isLoading:t,pastDelay:r})=>null};e instanceof Promise?a.loader=()=>e:"function"==typeof e?a.loader=e:"object"==typeof e&&(a={...a,...e});let i=(a={...a,...t}).loader;return(a.loadableGenerated&&(a={...a,...a.loadableGenerated},delete a.loadableGenerated),"boolean"!=typeof a.ssr||a.ssr)?r({...a,loader:()=>null!=i?i().then(f):Promise.resolve(f(()=>null))}):(delete a.webpack,delete a.modules,c(r,a))}("function"==typeof r.default||"object"==typeof r.default&&null!==r.default)&&void 0===r.default.__esModule&&(Object.defineProperty(r.default,"__esModule",{value:!0}),Object.assign(r.default,r),t.exports=r.default)},341048,(e,t,r)=>{t.exports=e.r(935360)},773948,e=>{"use strict";var t=e.i(738623),r=e.i(664152);let a=new class{config;activeRefreshPromise=null;constructor(e){this.config={maxRetries:3,baseDelayMs:1e3,maxDelayMs:5e3,...e}}async refreshCookie(e){return this.activeRefreshPromise?r.logger.info("Cookie refresh already in progress, waiting for existing operation to complete"):this.activeRefreshPromise=this.executeRefreshOperation(e),this.activeRefreshPromise}async executeRefreshOperation(e){let t=null;try{for(let a=1;a<=this.config.maxRetries;a++){if(t=await this.attemptCookieRefresh(e,a),"success"===t.type)return a>1&&r.logger.info("Cookie refresh succeeded after retries",{attempt:a,totalAttempts:a}),t;if(!this.isRetryableError(t))return r.logger.warn("Cookie refresh failed with non-retryable error",{attempt:a,resultType:t.type,errorMessage:t.message}),t;if(r.logger.warn("Cookie refresh attempt failed, will retry",{attempt:a,resultType:t.type,errorMessage:t.message,remainingAttempts:this.config.maxRetries-a}),a<this.config.maxRetries){let e=this.calculateBackoffDelay(a);await new Promise(t=>setTimeout(t,e))}}return r.logger.error("Cookie refresh failed after all retry attempts",{finalAttempt:this.config.maxRetries,lastError:t?.type,lastMessage:t?.message}),t||{type:"error",message:"Cookie refresh failed after all retry attempts"}}finally{this.activeRefreshPromise=null}}async attemptCookieRefresh(e,a){try{return r.logger.info("Cookie refresh attempt",{attempt:a,maxRetries:this.config.maxRetries}),await (0,t.setCookie)(e)}catch(e){return r.logger.warn("Cookie refresh attempt failed with exception",{attempt:a,errorDetails:e instanceof Error?e.message:String(e)}),{type:"error",message:e instanceof Error?e.message:"Unknown error during cookie refresh"}}}isRetryableError(e){return"needs_email_verification"!==e.type&&"error"===e.type}calculateBackoffDelay(e){let t=Math.min(this.config.baseDelayMs*Math.pow(2,e-1),this.config.maxDelayMs),r=.25*t*(Math.random()-.5);return Math.round(t+r)}getState(){return{hasActivePromise:null!==this.activeRefreshPromise}}reset(){this.activeRefreshPromise=null}};e.s(["cookieRefreshService",0,a])},384444,e=>{"use strict";let t="/public/icons/favicon-prompt-";e.s(["favicons",0,{prompt:t+"192.png",agentWaiting:t+"agent-waiting-192.png",agentWorking:t+"agent-working-192.png",agentFinished:t+"agent-finished-192.png"}])},462212,e=>{"use strict";var t=e.i(276385),r=e.i(389959),a=e.i(830675),i=e.i(442121),o=e.i(773948),l=e.i(294426),n=e.i(664152),s=e.i(441329),f=e.i(967629);let c=(0,r.createContext)({user:void 0});e.s(["default",0,({children:e})=>{let u=(0,i.useApolloClient)(),[m,d]=(0,r.useState)(),p=(0,s.useIsInBonsaiWebview)();return(0,r.useEffect)(()=>{let e=()=>{},t=null;return(0,l.configureAuth)().then(()=>{e=(0,l.onTokenUpdate)(async e=>{if(e?d(e):d(void 0),e&&await (0,l.shouldRefreshCookie)(e)){if("success"===(await o.cookieRefreshService.refreshCookie(e)).type)return void n.logger.info("Cookie refresh succeeded");n.logger.warn("Cookie refresh failed after all retries, signing out user"),await (0,l.signOut)(u)}});let r=async()=>{try{let e=(0,l.getAuthInstance)().currentUser;e&&!e.isAnonymous&&await e.getIdToken(!0)}catch(e){a.withScope(t=>{t.setExtra("proactiveTokenRefresh",!0),t.setExtra("isInBonsaiWebview",p),a.captureException(e)})}};p||(t=setInterval(r,15e5))}).catch(e=>{a.withScope(t=>{t.setExtra("configureAuth",!0),a.captureException(e)})}),()=>(t&&clearInterval(t),e())},[u,p]),(0,t.jsxs)(c.Provider,{value:{user:m},children:[e,(0,t.jsx)(f.Global,{styles:[`
+        .grecaptcha-badge {
+          visibility: hidden;
+        }
+      `]})]})},"useTokenContext",0,()=>(0,r.useContext)(c)])},705095,924735,e=>{"use strict";var t=e.i(276385),r=e.i(924035),a=e.i(389959),i=e.i(384444);let o=()=>(0,t.jsxs)(r.default,{children:[(0,t.jsx)("link",{rel:"preload",href:"/public/fonts/ibm-plex-sans-v8-latin-regular.woff2",as:"font",type:"font/woff2",crossOrigin:"anonymous"}),(0,t.jsx)("link",{rel:"preload",href:"/public/fonts/ibm-plex-sans-v8-latin-italic.woff2",as:"font",type:"font/woff2",crossOrigin:"anonymous"}),(0,t.jsx)("link",{rel:"preload",href:"/public/fonts/ibm-plex-sans-v8-latin-500.woff2",as:"font",type:"font/woff2",crossOrigin:"anonymous"}),(0,t.jsx)("link",{rel:"preload",href:"/public/fonts/ibm-plex-sans-v8-latin-500italic.woff2",as:"font",type:"font/woff2",crossOrigin:"anonymous"}),(0,t.jsx)("link",{rel:"preload",href:"/public/fonts/ibm-plex-sans-v8-latin-600.woff2",as:"font",type:"font/woff2",crossOrigin:"anonymous"}),(0,t.jsx)("link",{rel:"preload",href:"/public/fonts/ibm-plex-sans-v8-latin-600italic.woff2",as:"font",type:"font/woff2",crossOrigin:"anonymous"}),(0,t.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+    /* PLEX SANS */
+
+    /* ibm-plex-sans-regular - latin */
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local('IBM Plex Sans Regular'), local('IBMPlexSans-Regular'),
+          url('/public/fonts/ibm-plex-sans-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/public/fonts/ibm-plex-sans-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* ibm-plex-sans-italic - latin */
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-style: italic;
+      font-weight: 400;
+      src: local('IBM Plex Sans Italic'), local('IBMPlexSans-Italic'),
+          url('/public/fonts/ibm-plex-sans-v8-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/public/fonts/ibm-plex-sans-v8-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* ibm-plex-sans-500 - latin */
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-style: normal;
+      font-weight: 500;
+      src: local('IBM Plex Sans Medium'), local('IBMPlexSans-Medium'),
+          url('/public/fonts/ibm-plex-sans-v8-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/public/fonts/ibm-plex-sans-v8-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* ibm-plex-sans-500italic - latin */
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-style: italic;
+      font-weight: 500;
+      src: local('IBM Plex Sans Medium Italic'), local('IBMPlexSans-Medium-Italic'),
+          url('/public/fonts/ibm-plex-sans-v8-latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/public/fonts/ibm-plex-sans-v8-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* ibm-plex-sans-600 - latin */
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-style: normal;
+      font-weight: 600;
+      src: local('IBM Plex Sans Semibold'), local('IBMPlexSans-Semibold'),
+          url('/public/fonts/ibm-plex-sans-v8-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/public/fonts/ibm-plex-sans-v8-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* ibm-plex-sans-600italic - latin */
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-style: italic;
+      font-weight: 600;
+      src: local('IBM Plex Sans Semibold Italic'), local('IBMPlexSans-Semibold-Italic'),
+          url('/public/fonts/ibm-plex-sans-v8-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('/public/fonts/ibm-plex-sans-v8-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* ABC Diatype */
+    @font-face {
+      font-family: 'ABC Diatype';
+      font-weight: 100 1000;
+      src: local('ABC Diatype'), local('ABCDiatype'),
+          url('/public/fonts/ABCDiatypePlusVariable-Regular.woff2') format('woff2')
+    }
+
+    /* ABC Diatype Variable */
+    @font-face {
+      font-family: 'ABC Diatype Variable';
+      font-weight: 100 1000;
+      src: local('ABC Diatype Variable'), local('ABCDiatypeVariable'),
+          url('/public/fonts/ABCDiatype-RegularPixelBeta.woff2') format('woff2')
+    }
+
+    /* ABC Diatype Pixel */
+    @font-face {
+      font-family: 'ABC Diatype Pixel';
+      font-style: normal;
+      font-weight: 400;
+      font-feature-settings: '"ss15"';
+      src: local('ABC Diatype Pixel'), local('ABCDiatypePixel'),
+        url('/public/fonts/ABCDiatype-RegularPixelBeta.woff') format('woff'),
+        url('/public/fonts/ABCDiatype-RegularPixelBeta.woff2') format('woff2')
+    }
+  `}})]}),l=()=>(0,t.jsx)(r.default,{children:(0,t.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        @font-face {
+          font-family: 'ReplitHack';
+          src: url('/public/fonts/hack-regular.woff2?sha=3114f1256') format('woff2'), url('/public/fonts/hack-regular.woff?sha=3114f1256') format('woff');
+          font-weight: 400;
+          font-style: normal;
+        }
+        
+        @font-face {
+          font-family: 'ReplitHack';
+          src: url('/public/fonts/hack-bold.woff2?sha=3114f1256') format('woff2'), url('/public/fonts/hack-bold.woff?sha=3114f1256') format('woff');
+          font-weight: 700;
+          font-style: normal;
+        }
+        
+        @font-face {
+          font-family: 'ReplitHack';
+          src: url('/public/fonts/hack-italic.woff2?sha=3114f1256') format('woff2'), url('/public/fonts/hack-italic.woff?sha=3114f1256') format('woff');
+          font-weight: 400;
+          font-style: italic;
+        }
+        
+        @font-face {
+          font-family: 'ReplitHack';
+          src: url('/public/fonts/hack-bolditalic.woff2?sha=3114f1256') format('woff2'), url('/public/fonts/hack-bolditalic.woff?sha=3114f1256') format('woff');
+          font-weight: 700;
+          font-style: italic;
+        }
+        `}})});var n=e.i(441329),s=e.i(332441),f=e.i(628745);function c(){return(0,f.default)(()=>{function e(e){e.preventDefault()}return window.addEventListener("beforeinstallprompt",e),()=>{window.removeEventListener("beforeinstallprompt",e)}},[]),null}let u=i.favicons.prompt,m="Build and deploy software collaboratively with the power of AI without spending a second on setup.",d="replit,ai,software,build,collaborate,IDE,platform,code,deploy,prototype,online,agent",p="https://replit.com/public/images/opengraph.png";e.s(["default",0,({title:e,description:i=m,image:f=p,keywords:h=d,canonicalUrl:x,largeCard:g})=>{let[y,w]=(0,a.useState)(!1),b=function(){let[e,t]=(0,a.useState)(!1),r=(0,n.useIsInMobileWorkspace)(),i=(0,s.useIsIOS)(),o=(0,s.useIsAndroid)();return(0,a.useEffect)(()=>{t(i||r&&!o)},[r,o,i]),e}(),v=`${e} - Replit`;return(0,a.useEffect)(()=>{window.location.host.startsWith("staging")&&w(!0)},[]),(0,t.jsxs)(t.Fragment,{children:[(0,t.jsxs)(r.default,{children:[(0,t.jsx)("title",{children:v},"title"),(0,t.jsx)("link",{rel:"shortcut icon",href:u,sizes:"192x192",type:"image/png"}),y?(0,t.jsx)("meta",{name:"robots",content:"noindex"}):null,(0,t.jsx)("meta",{property:"og:title",content:e},"meta:og:title"),(0,t.jsx)("meta",{property:"og:description",content:i},"meta:og:description"),(0,t.jsx)("meta",{property:"og:type",content:"article"},"meta:og:type"),(0,t.jsx)("meta",{property:"og:image",content:f},"meta:og:image"),(0,t.jsx)("meta",{property:"og:site_name",content:"replit"}),(0,t.jsx)("meta",{property:"fb:app_id",content:"1775481339348651"}),(0,t.jsx)("meta",{itemProp:"name",content:"replit"}),(0,t.jsx)("meta",{itemProp:"description",content:i},"meta:itemProp:description"),(0,t.jsx)("meta",{itemProp:"image",content:f},"meta:image"),(0,t.jsx)("meta",{name:"description",content:i},"meta:description"),(0,t.jsx)("meta",{name:"keywords",content:h},"meta:keywords"),(0,t.jsx)("meta",{name:"author",property:"og:author",content:"replit"},"meta:og:author"),(0,t.jsx)("meta",{charSet:"UTF-8"}),(0,t.jsx)("meta",{name:"twitter:card",content:g?"summary_large_image":"summary"},"meta:twitter:card"),(0,t.jsx)("meta",{name:"twitter:site",content:"@replit"}),(0,t.jsx)("meta",{name:"twitter:title",content:e},"meta:twitter:title"),(0,t.jsx)("meta",{name:"twitter:description",content:i},"meta:twitter:description"),(0,t.jsx)("meta",{name:"twitter:image",content:f},"meta:twitter:image"),(0,t.jsx)("meta",{name:"twitter:domain",content:"replit.com"}),(0,t.jsx)("meta",{name:"google",content:"notranslate"}),b?(0,t.jsx)("meta",{name:"viewport",content:"width=device-width, initial-scale=1, maximum-scale=1"},"viewport"):(0,t.jsx)("meta",{name:"viewport",content:"width=device-width, initial-scale=1"},"viewport"),(0,t.jsx)("meta",{charSet:"utf-8"}),(0,t.jsx)("link",{rel:"manifest",href:"/public/manifest.json"}),(0,t.jsx)("meta",{name:"theme-color",content:"#12141A"}),(0,t.jsx)("meta",{httpEquiv:"origin-trial",content:"AsKJNnBESA8LBSWSiA1TeHAuM7wj/zSm2MVlsxnG6yMeAuorNg9zyAEC3w+lp88yOz+9zkJmIQ++T1Cl4asHoAUAAABQeyJvcmlnaW4iOiJodHRwczovL3JlcGxpdC5jb206NDQzIiwiZmVhdHVyZSI6IkRpZ2l0YWxHb29kcyIsImV4cGlyeSI6MTYzMTY2Mzk5OX0="}),(0,t.jsx)("link",{rel:"apple-touch-icon",href:u}),(0,t.jsx)("meta",{name:"mobile-web-app-capable",content:"yes"}),(0,t.jsx)("meta",{name:"apple-mobile-web-app-title",content:"Replit"}),(0,t.jsx)("link",{rel:"search",type:"application/opensearchdescription+xml",href:"/public/opensearch.xml",title:"Replit"}),x?(0,t.jsx)("link",{rel:"canonical",href:x},"rel:canonical"):null]}),(0,t.jsx)(o,{}),(0,t.jsx)(l,{}),(0,t.jsx)(c,{})]})}],705095);var h=e.i(221042),x=e.i(541793),g=e.i(161322);let y=(0,x.atom)(!1);function w({children:e}){let[r,i]=(0,g.useAtom)(y),o="1"!==h.default.env.DISABLE_STRICT_MODE;return((0,a.useEffect)(()=>{},[o,r,i]),o)?(0,t.jsx)(a.StrictMode,{children:e}):e}e.s(["StrictModeWrapper",()=>w],924735)},422412,e=>{e.v({container:"Menu-module__ERNyJa__container",header:"Menu-module__ERNyJa__header",headerText:"Menu-module__ERNyJa__headerText",item:"Menu-module__ERNyJa__item",menu:"Menu-module__ERNyJa__menu",separator:"Menu-module__ERNyJa__separator"})},119274,e=>{"use strict";var t=e.i(276385),r=e.i(389959),a=e.i(674310),i=e.i(625251),o=e.i(701382),l=e.i(255615),n=e.i(341190),s=e.i(248033),f=e.i(932200),c=e.i(167392),u=e.i(116235),m=e.i(416746),d=e.i(907371),p=e.i(480028),h=e.i(703774);e.i(375581);var x=e.i(169099),g=e.i(584426),y=e.i(173703),w=e.i(140487),b=e.i(181141),v=e.i(604963),_=e.i(960178),j=e.i(751273),C=e.i(625484),k=e.i(422412);let M=(0,p.cvarsFrom)("Menu2.module.css",["--menu-item-color"]),R=r.forwardRef((e,r)=>(0,t.jsx)(o.Separator,{...e,clsx:k.default.separator,ref:r})),S=r.forwardRef(({text:e,tooltip:r,trailingElement:a},i)=>(0,t.jsxs)(n.Header,{clsx:k.default.header,ref:i,children:[(0,t.jsx)(_.Text,{color:"dimmest",clsx:k.default.headerText,variant:"small",children:e}),a,r?(0,t.jsx)(j.Tooltip,{placement:"right",tooltip:r,children:(0,t.jsx)(m.default,{color:p.tokens.foregroundDimmer,size:12})}):null]})),P=r.forwardRef(function({dataCy:e,...r},a){return(0,t.jsx)(i.Menu,{ref:a,clsx:k.default.menu,"data-cy":e,...r})}),I=(0,r.forwardRef)(function({dataCy:e,as:r,href:a,scroll:o,shallow:l,children:n,style:s,...f},c){let u=(0,d.useCreateInteractive)({variant:"nofill"});return(0,t.jsx)(i.MenuItem,{...f,...(0,b.useNextRouterPropsToReactAriaProps)({as:r,href:a,scroll:o,shallow:l}),clsx:[...u.clsx,k.default.item],ref:c,"data-cy":e,style:{...u.style,...s},children:n})}),A=(0,r.forwardRef)(function({multiline:e=!1,height:r="singleLine",...i},o){let l=(0,f.useSlottedContext)(s.TextContext,"label");return(0,t.jsx)(_.Text,{...(0,a.mergeProps)(l,{multiline:e,height:r},i),ref:o})}),B=(0,r.forwardRef)(function({multiline:e=!1,height:r="singleLine",variant:i="small",...o},l){let n=(0,f.useSlottedContext)(s.TextContext,"description");return(0,t.jsx)(_.Text,{...(0,a.mergeProps)(n,{multiline:e,height:r,variant:i},o),ref:l})}),D=(0,r.forwardRef)(function({dataCy:e,label:r,description:a,icon:i,iconRight:o,href:l,as:n,shallow:s,scroll:f,isDestructive:c,isDisabled:m,style:d,labelProps:y,...w},b){let{isDarkColorScheme:v}=(0,h.useTheme)(),_=v?x.replitDark:g.replitLight,j=p.tokens.foregroundDefault;j=c?m?_.values.global.accentNegativeDimmer:_.values.global.accentNegativeStronger:m?p.tokens.foregroundDimmest:p.tokens.foregroundDefault;let{style:k,color:R,...S}=y??{},P=null!=R||k?.color!=null;return(0,t.jsxs)(I,{...w,ref:b,isDisabled:m,style:{...d,[M.menuItemColor]:j,color:j},dataCy:e,textValue:r,href:l,as:n,shallow:s,scroll:f,children:[(0,t.jsx)(u.IconProvider,{size:16,children:i}),(0,t.jsxs)(C.View,{gap:4,grow:!0,children:[(0,t.jsx)(A,{style:P?k:{color:j,...k},color:R,...S,children:r}),a?(0,t.jsx)(B,{children:a}):null]}),o?(0,t.jsx)(u.IconProvider,{size:16,children:o}):null]})}),E=r.forwardRef(function({children:e,label:r,trigger:a,defaultOpen:o,isOpen:n,onOpenChange:s,dataCy:f,elevated:u=!0,background:m,placement:d,header:p,...h},x){let g=a||(0,t.jsx)(w.Button,{iconRight:(0,t.jsx)(c.default,{}),text:r??"",disabled:h.isDisabled});return(0,t.jsxs)(i.MenuTrigger,{...{defaultOpen:o,isOpen:n,onOpenChange:s},children:[(0,t.jsx)(l.ButtonContext.Provider,{value:{"data-cy":f},children:g}),(0,t.jsx)(v.RawPopover,{...{elevated:u,background:m,placement:d},style:{minWidth:"var(--trigger-width)"},shouldCloseOnInteractOutside:e=>("TD"!==e.tagName||"gridcell"!==e.getAttribute("role"))&&"dialog"!==e.getAttribute("role"),children:(0,t.jsxs)(y.ShadesSurface,{className:k.default.container,colorShade:"popup",p:4,br:"container",children:[p,(0,t.jsx)(P,{ref:x,...h,children:e})]})})]})});e.s(["BaseMenuItem",0,I,"Menu",0,P,"MenuHeader",0,S,"MenuItem",0,D,"MenuItemLabel",0,A,"PopupMenu",0,E,"Separator",0,R])},26289,e=>{e.v({divider:"DividerV-module__sMUe4W__divider"})},764848,e=>{"use strict";var t=e.i(276385),r=e.i(26289);function a({className:e}){return(0,t.jsx)("div",{clsx:[r.default.divider,e]})}e.s(["DividerV",()=>a])},532764,e=>{"use strict";var t=e.i(276385),r=e.i(116235);function a(e){return(0,t.jsx)(r.default,{...e,children:(0,t.jsx)("path",{d:"M5.25 4.125C5.25 3.504 5.754 3 6.375 3h5.25c.621 0 1.125.504 1.125 1.125V9H6.375A1.125 1.125 0 0 1 5.25 7.875v-3.75ZM12.75 9h6.375c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125H12.75V9ZM5.25 16.125c0-.621.504-1.125 1.125-1.125h6.375v4.875c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-3.75Z"})})}e.s(["default",()=>a])}]);
+
+//# debugId=a7cf0f3f-74b9-8cfb-1592-969dba0a7c73
+//# sourceMappingURL=d5b2cf9397f141e1.js.map
